@@ -1,20 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyMovement.cs">
     <Files>
+<<<<<<< Updated upstream
       <File FileName="Assets/Scripts/PlayerController.cs" Line="33" Column="50" />
+=======
+      <File FileName="Assets/Scripts/EnemyMovement.cs" Line="17" Column="15" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="10" Column="1" />
+>>>>>>> Stashed changes
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp" expanded="True">
-            <Node name="Scripts" expanded="True">
-              <Node name="PlayerController.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

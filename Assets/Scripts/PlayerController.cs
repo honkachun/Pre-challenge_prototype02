@@ -35,8 +35,8 @@ public class PlayerController : MonoBehaviour {
 			Vector3 touchPosition = Input.GetTouch(0).position;
 			float touchPositionX = touchPosition.x;
 
-			Vector3 movePosition = Input.GetTouch(0).phase = TouchPhase.Moved;
-			float movePositionX = movePosition.x;
+			/*Vector3 movePosition = Input.GetTouch(0).phase = TouchPhase.Moved;
+			float movePositionX = movePosition.x;*/
 
 			TouchMessage.text = "Touched";
 
@@ -45,11 +45,11 @@ public class PlayerController : MonoBehaviour {
 
 			Move(h,v);
 
-			if(movePositionX > touchPositionX){
+			/*if(movePositionX > touchPositionX){
 				h += 5f;
 			}else {
 				h -=5f;
-			}
+			}*/
 
 			//playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, playerRigidbody.velocity.y, speed);
 
