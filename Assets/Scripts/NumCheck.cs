@@ -17,5 +17,6 @@ public class NumCheck : MonoBehaviour {
 		float accx = Input.acceleration.x;
 		float accy = Input.acceleration.y;
 		TxtAcc.text = "AcceX :" + accx + "    " + "AcceY :" + accy;
+
 	}
 }

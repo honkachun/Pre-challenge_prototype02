@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\MonsterHealth.cs" />
      <Compile Include="Assets\Scripts\NumCheck.cs" />
+     <Compile Include="Assets\Scripts\OwnerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\WallPos.cs" />
  <Reference Include="UnityEngine.UI">
