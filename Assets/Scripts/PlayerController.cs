@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 	public Text TouchMessageBegin;
 	public Text TouchMessageFinal;
 	public float PlayerSpeed;
+	public float RotateSpeed;
 
 	Vector3 movement;
 	Rigidbody playerRigidbody;
@@ -38,7 +39,13 @@ public class PlayerController : MonoBehaviour {
 
 		float Step = PlayerSpeed * Time.deltaTime;
 
-		transform.Rotate (0, h / 20, 0);
+		if (v > 0 && RotateSpeed < 0) {
+			RotateSpeed = -RotateSpeed;
+		} else if (v < 0 && RotateSpeed > 0) {
+			RotateSpeed = -RotateSpeed;
+		}
+
+		transform.Rotate (0, RotateSpeed, 0);
 
 		if (Input.touchCount > 0 && Input.GetTouch (0).phase != TouchPhase.Ended) {
 			//transform.position = Vector3.MoveTowards (transform.position, targetPosition, Step);	
