@@ -29,7 +29,8 @@ public class EnemyMovement : MonoBehaviour {
 	{
 		if(col.gameObject == Target)
 		{
-			Destroy(gameObject);
+
+			//Destroy(gameObject);
 		}
 	}
 
