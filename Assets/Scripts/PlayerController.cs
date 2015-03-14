@@ -4,11 +4,15 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 	
-	public Text TouchMessage;
-	public float speed = 6f;
+	public Text TouchMessageBegin;
+	public Text TouchMessageFinal;
+	public float PlayerSpeed;
 
 	Vector3 movement;
 	Rigidbody playerRigidbody;
+
+	Vector2 touchBegin;
+	Vector2 touchFinal; 
 
 	int floorMask;
 	//float camRayLength = 100f;
@@ -22,58 +26,43 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
-		//Movement of the character
-		/*if(!Input.GetKey(KeyCode.S)){
-			float move = Input.GetAxis ("Horizontal");
-		}*/
+		TouchControl ();
 
-
-		//ControlTesting ();
-
-		if (Input.touchCount >= 0 && (Input.GetTouch (0).phase == TouchPhase.Stationary || Input.GetTouch (0).phase == TouchPhase.Moved)) {
-
-			Vector3 touchPosition = Input.GetTouch(0).position;
-			float touchPositionX = touchPosition.x;
-
-			/*Vector3 movePosition = Input.GetTouch(0).phase = TouchPhase.Moved;
-			float movePositionX = movePosition.x;*/
-
-			TouchMessage.text = "Touched";
-
-			float h = 0f;
-			float v = 5f;
-
-			Move(h,v);
-
-			/*if(movePositionX > touchPositionX){
-				h += 5f;
-			}else {
-				h -=5f;
-			}*/
-
-			//playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, playerRigidbody.velocity.y, speed);
-
-		}else if (Input.touchCount < 0) {
-
-			TouchMessage.text = "NoContact";
-		}
 	}
 
 	void Move (float h, float v){
+		
+		Vector3 targetPosition = new Vector3();
+		targetPosition.x = h + transform.position.x;
+		targetPosition.z = v + transform.position.z;
 
-		movement.Set (h, 0f, v);
-		movement = movement.normalized * speed * Time.deltaTime;
-		playerRigidbody.MovePosition (transform.position + movement);
+		float Step = PlayerSpeed * Time.deltaTime;
 
+		transform.Rotate (0, h / 20, 0);
+
+		if (Input.touchCount > 0 && Input.GetTouch (0).phase != TouchPhase.Ended) {
+			//transform.position = Vector3.MoveTowards (transform.position, targetPosition, Step);	
+		}
+		
 	}
 
-	void ControlTesting (){
+	void TouchControl (){
 	
-		// Store the input axes.
-		float h = Input.GetAxisRaw("Horizontal");
-		float v = Input.GetAxisRaw("Vertical");
-		
+		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) {
+			touchBegin = Input.GetTouch(0).position;
+		}
+		if (Input.touchCount > 0 && Input.GetTouch (0).phase == TouchPhase.Moved) {
+			touchFinal = Input.GetTouch (0).position;
+		}
+
+		float h = touchFinal.x - touchBegin.x;
+		float v = touchFinal.y - touchBegin.y;
+
+		TouchMessageBegin.text = "Begin X:" + touchBegin.x + "Begin Y:" + touchBegin.y;
+		TouchMessageFinal.text = "Final X:" + touchFinal.x + "Final Y:" +touchFinal.y;
+
 		// Move the player around the scene.
 		Move (h, v);
 	}
+
 }
