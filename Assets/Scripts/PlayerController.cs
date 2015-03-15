@@ -7,10 +7,10 @@ public class PlayerController : MonoBehaviour {
 	public Text TouchMessageBegin;
 	public Text TouchMessageFinal;
 	public float PlayerSpeed;
+	private GameObject playerBody;
 
 	Vector3 movement;
 	Rigidbody playerRigidbody;
-	body = GameObject.
 
 	Vector2 touchBegin;
 	Vector2 touchFinal; 
@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour {
 	void FixedUpdate () {
 
 		TouchControl ();
+		playerBody = GameObject.Find("Player/body");
 
 	}
 
@@ -38,14 +39,9 @@ public class PlayerController : MonoBehaviour {
 		targetPosition.z = v + transform.position.z;
 
 		float Step = PlayerSpeed * Time.deltaTime;
-		body = transform.Find ("body");
 
 		if (Input.touchCount > 0 && Input.GetTouch (0).phase != TouchPhase.Ended) {
 			transform.position = Vector3.MoveTowards (transform.position, targetPosition, Step);	
-
-			float rotationDegree = Mathf.Tan(h/v);
-
-			body.transform.Rotate(0, rotationDegree, 0 );
 
 		}
 	}
