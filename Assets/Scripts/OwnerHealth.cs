@@ -10,8 +10,19 @@ public class OwnerHealth : MonoBehaviour {
 	bool playerInRange;
 	float timer;
 
+	public Image damageImage;
+	public Image comingLeft;
+	public Image comingRight;
+	public float flashSpeed = 5f;
+	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
+	public Color flashComingColour = new Color(1f, 0f, 0f, 0.1f);
 	bool isDead;
 	bool damaged;
+	bool EnemyComingLeft;
+	bool EnemyComingRight;
+
+	public GameObject Enemy;
+
 	public GameObject playerBody;
 	Rigidbody player;
 	public Slider healthSlider;
@@ -47,6 +58,19 @@ public class OwnerHealth : MonoBehaviour {
 
 	void Update (){
 
+		EnemyCome ();
+
+		if(damaged)
+		{
+			damageImage.color = flashColour;
+		}
+		else
+		{
+			damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+		}
+		damaged = false;
+
+
 		playerHealthIndex.text = "HealthIndex"+ " " + currentHealth;
 
 		timer += Time.deltaTime;
@@ -75,6 +99,28 @@ public class OwnerHealth : MonoBehaviour {
 
 		if(currentHealth <= 0 && !isDead){
 			Death ();
+		}
+	}
+
+	void EnemyCome(){
+	
+		//EnemyComing = true;
+		timer = 0f;
+
+		if (Enemy.transform.position.z < this.transform.position.z + 20 && Enemy.transform.position.z > this.transform.position.z && Enemy.transform.position.x < Screen.width / 2) {
+			EnemyComingLeft = true;
+		}else if(Enemy.transform.position.z < this.transform.position.z + 20 && Enemy.transform.position.z > this.transform.position.z && Enemy.transform.position.x > Screen.width /2){
+			EnemyComingRight = true;
+		}
+
+		if (EnemyComingLeft == true) {
+			comingLeft.color = flashComingColour;
+			EnemyComingLeft = false;
+
+		}else if(EnemyComingRight == true){
+			comingRight.color = flashComingColour;
+			EnemyComingRight = false;
+
 		}
 	}
 
