@@ -44,7 +44,27 @@ public class OwnerHealth : MonoBehaviour {
 	}
 
 	// Check contact between Player and Enemy
-	void OnTriggerEnter(Collider collider) {
+
+	void OnCollisionEnter(Collision coll){
+	
+		if (coll.gameObject.tag == "Enemy") {
+			
+			Debug.Log (playerHealth);
+			
+			playerInRange = true;
+		}
+	}
+
+	void OnCollisionExit(Collision coll){
+		
+		if (coll.gameObject.tag == "Enemy") {
+			
+			Debug.Log (playerHealth);
+			
+			playerInRange = true;
+		}
+	}
+	/*void OnTriggerEnter(Collider collider) {
 
 		if (collider.gameObject.tag == "Enemy") {
 
@@ -60,11 +80,11 @@ public class OwnerHealth : MonoBehaviour {
 			
 			playerInRange = false;
 		}
-	}
+	}*/
 
 	void Update (){
 
-		EnemyCome ();
+		//EnemyCome ();
 
 		if(damaged)
 		{

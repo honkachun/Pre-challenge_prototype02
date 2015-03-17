@@ -65,4 +65,10 @@ public class PlayerController : MonoBehaviour {
 		Move (h, v);
 	}
 
+	void OnTriggerEnter(Collider collider) {
+		
+		if (collider.gameObject.tag == "Enemy")
+			Debug.Log ("Enemy is Entering to the attacking area");
+	}
+
 }
