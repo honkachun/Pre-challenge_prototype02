@@ -7,8 +7,19 @@ public class EnemyMovement : MonoBehaviour {
 	public GameObject Target;
 	public float CloseDistance;
 
+
+	AudioSource enemyAudio;
+	public AudioClip enemyWalk;
+
 	// Use this for initialization
-	void Start () {
+	void Awake () {
+
+		enemyAudio = GetComponent<AudioSource> ();
+	}
+
+	void Start(){
+	
+		EnemyWalk ();
 	}
 	
 	// Update is called once per frame
@@ -32,6 +43,13 @@ public class EnemyMovement : MonoBehaviour {
 
 			//Destroy(gameObject);
 		}
+	}
+
+	void EnemyWalk (){
+
+		enemyAudio.clip = enemyWalk;
+		enemyAudio.Play ();
+
 	}
 
 }

@@ -64,7 +64,7 @@ public class OwnerHealth : MonoBehaviour {
 
 	void Update (){
 
-		//EnemyCome ();
+		EnemyCome ();
 
 		if(damaged)
 		{
