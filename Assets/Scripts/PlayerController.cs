@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 	void Awake(){
 
 		playerRigidbody = GetComponent<Rigidbody> ();
+		playerBody = GameObject.Find("Player/body");
 	}
 	
 
@@ -28,7 +29,6 @@ public class PlayerController : MonoBehaviour {
 	void FixedUpdate () {
 
 		TouchControl ();
-		playerBody = GameObject.Find("Player/body");
 
 	}
 
