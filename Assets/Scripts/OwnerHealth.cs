@@ -30,11 +30,6 @@ public class OwnerHealth : MonoBehaviour {
 	public int playerHealth = 10;
 	public int currentHealth;
 	public Text playerHealthIndex;
-
-	//AudioClips
-	public AudioSource getHurt;
-
-
 	
 	void Awake (){
 	
@@ -63,7 +58,7 @@ public class OwnerHealth : MonoBehaviour {
 
 	void Update (){
 
-		//EnemyCome ();
+		EnemyCome ();
 
 		if(damaged)
 		{
@@ -83,7 +78,6 @@ public class OwnerHealth : MonoBehaviour {
 		if(timer >= timeBetweenAttacks && playerInRange == true)
 		{
 			Attack ();
-			getHurt.Play();
 
 			Debug.Log ("AfterAttack" + playerHealth);
 		}

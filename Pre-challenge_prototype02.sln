@@ -19,15 +19,6 @@ Global
 	EndGlobalSection
 																															GlobalSection(MonoDevelopProperties) = preSolution
 =======
-																												GlobalSection(MonoDevelopProperties) = preSolution
->>>>>>> Stashed changes
-<<<<<<< Updated upstream
-=======
-																															GlobalSection(MonoDevelopProperties) = preSolution
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
 																			GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> Stashed changes
 		StartupItem = Assembly-CSharp.csproj

@@ -1,40 +1,10 @@
 ﻿<Properties>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/OwnerHealth.cs">
     <Files>
       <File FileName="../../shooter/Assets/Scripts/Player/PlayerHealth.cs" Line="10" Column="30" />
       <File FileName="Assets/Scripts/OwnerHealth.cs" Line="13" Column="27" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Attack.cs">
-    <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemyMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Attack.cs" Line="24" Column="11" />
->>>>>>> Stashed changes
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyMovement.cs">
-    <Files>
-      <File FileName="../../shooter/Assets/Scripts/Player/PlayerHealth.cs" Line="11" Column="31" />
-      <File FileName="Assets/Scripts/OwnerHealth.cs" Line="90" Column="3" />
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="23" Column="48" />
-      <File FileName="Assets/Scripts/EnemyMovement.cs" Line="17" Column="18" />
->>>>>>> Stashed changes
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp" expanded="True">
-            <Node name="Scripts" expanded="True">
-              <Node name="EnemyMovement.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

@@ -6,11 +6,9 @@ public class EnemyMovement : MonoBehaviour {
 	public float EnemySpeed;
 	public GameObject Target;
 	public float CloseDistance;
-	public AudioSource movementSound;
 
 	// Use this for initialization
 	void Start () {
-		movementSound.Play ();
 	}
 	
 	// Update is called once per frame
