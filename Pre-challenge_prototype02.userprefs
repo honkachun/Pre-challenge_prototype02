@@ -1,9 +1,18 @@
 ﻿<Properties>
+<<<<<<< Updated upstream
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/OwnerHealth.cs">
     <Files>
       <File FileName="../../shooter/Assets/Scripts/Player/PlayerHealth.cs" Line="10" Column="30" />
       <File FileName="Assets/Scripts/OwnerHealth.cs" Line="13" Column="27" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Attack.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EnemyMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Attack.cs" Line="24" Column="11" />
+>>>>>>> Stashed changes
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
