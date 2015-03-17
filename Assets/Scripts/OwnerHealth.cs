@@ -31,10 +31,16 @@ public class OwnerHealth : MonoBehaviour {
 	public int currentHealth;
 	public Text playerHealthIndex;
 	
+	//Audios Clips
+	AudioSource playerAudio;
+	public AudioClip getHurt;
+
 	void Awake (){
 	
 		currentHealth = playerHealth;
 		player = GetComponent<Rigidbody> ();
+		playerAudio = GetComponent <AudioSource> ();
+
 	}
 
 	// Check contact between Player and Enemy
@@ -58,7 +64,7 @@ public class OwnerHealth : MonoBehaviour {
 
 	void Update (){
 
-		EnemyCome ();
+		//EnemyCome ();
 
 		if(damaged)
 		{
@@ -132,6 +138,9 @@ public class OwnerHealth : MonoBehaviour {
 		timer = 0f;
 		
 		if(this.currentHealth > 0){
+
+			playerAudio.clip = getHurt;
+			playerAudio.Play();
 
 			this.TakeDamage(attackDamage);
 			this.playerHealth = currentHealth - 1;
