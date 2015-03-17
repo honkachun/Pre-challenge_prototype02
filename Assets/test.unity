@@ -232,6 +232,7 @@ MonoBehaviour:
   EnemySpeed: 5
   Target: {fileID: 1013492744}
   CloseDistance: 33
+  movementSound: {fileID: 0}
 --- !u!136 &93246565
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1129,6 +1130,7 @@ MonoBehaviour:
   playerHealth: 10
   currentHealth: 0
   playerHealthIndex: {fileID: 201032164}
+  getHurt: {fileID: 0}
 --- !u!136 &1013492749
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1469,7 +1471,7 @@ RectTransform:
   m_Father: {fileID: 935289028}
   m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: .402624726, y: 1}
+  m_AnchorMax: {x: .5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
@@ -1610,6 +1612,7 @@ MonoBehaviour:
   EnemySpeed: 5
   Target: {fileID: 1013492744}
   CloseDistance: 20
+  movementSound: {fileID: 0}
 --- !u!54 &1651372084
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1654,7 +1657,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 935289028}
   m_RootOrder: 8
-  m_AnchorMin: {x: .595000029, y: 0}
+  m_AnchorMin: {x: .5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}

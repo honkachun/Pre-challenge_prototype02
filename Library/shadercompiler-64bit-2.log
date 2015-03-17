@@ -2,6 +2,7 @@ Base path: /Applications/Unity/Unity.app/Contents
 <<<<<<< Updated upstream
 Pipe name: \\.\pipe\UnityShaderCompiler-64bit-2-435699712
 Cmd: getPlatforms
+<<<<<<< Updated upstream
 =======
 Pipe name: \\.\pipe\UnityShaderCompiler-64bit-2-703721472
 Cmd: getPlatforms
@@ -33,6 +34,11 @@ Cmd: compileSnippet
   api=5 type=0 insize=3071 outsize=2683 kw=SHADOWS_CUBE ok=1
 Cmd: compileSnippet
   api=5 type=1 insize=3071 outsize=6 kw=SHADOWS_CUBE ok=1
+End of pipe
+
+Quitting shader compiler process
+>>>>>>> Stashed changes
+=======
 End of pipe
 
 Quitting shader compiler process
